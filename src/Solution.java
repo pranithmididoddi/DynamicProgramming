@@ -28,7 +28,7 @@ public class Solution {
         int[] myarray = {10, 9, 2, 5, 3, 7, 101, 18};
         System.out.println(LIS(myarray));
     }
-}
+
 
 /** for interviewBit   int result=0;
     int[] res=new int[nums.size()];
@@ -55,3 +55,23 @@ public class Solution {
 
     **/
 
+/**Longest distinct subsequence*/
+public int numDistinct(String S, String T) {
+    int[][] res=new int[S.length()+1][T.length()+1];
+
+    for(int i=0;i<S.length();i++){
+        res[i][0]=1;
+    }
+    for(int i=1;i<=S.length();i++){
+        for(int j=1;j<=T.length();j++){
+            if(S.charAt(i-1)==T.charAt(j-1)){
+                res[i][j]+=res[i-1][j]+res[i-1][j-1];
+            }
+            else{
+                res[i][j]+=res[i-1][j];
+            }
+        }
+    }
+    return res[S.length()][T.length()];
+}
+}
