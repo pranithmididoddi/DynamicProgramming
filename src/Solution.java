@@ -27,10 +27,12 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-      /**  int[] myarray = {10, 9, 2, 5, 3, 7, 101, 18};
-        System.out.println(LIS(myarray));*/
-        String string="Hi this is pranith mididoddi";
-        //System.out.println(returnlist(string));
+//      int[] myarray = {10, 9, 2, 5, 3, 7, 101, 18};
+//        System.out.println(LIS(myarray));*/
+//        String string="Hi this is pranith mididoddi";
+//        System.out.println(returnlist(string));
+
+        System.out.println(uniquePaths(4,4));
     }
 
 
@@ -80,7 +82,7 @@ public int numDistinct(String S, String T) {
 }
 
 /**Unique paths/AKA robot grid*/
-public int uniquePaths(int m, int n) {
+public static int uniquePaths(int m, int n) {
 
     int[][] robotgrid=new int[m][n];
 
