@@ -1,6 +1,8 @@
 /**
  * Created by Pranith on 1/3/17.
  */
+
+import java.util.*;
 public class Solution {
 
     public static int LIS(int[] nums) {
@@ -25,8 +27,10 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        int[] myarray = {10, 9, 2, 5, 3, 7, 101, 18};
-        System.out.println(LIS(myarray));
+      /**  int[] myarray = {10, 9, 2, 5, 3, 7, 101, 18};
+        System.out.println(LIS(myarray));*/
+        String string="Hi this is pranith mididoddi";
+        //System.out.println(returnlist(string));
     }
 
 
@@ -75,3 +79,29 @@ public int numDistinct(String S, String T) {
     return res[S.length()][T.length()];
 }
 }
+/**Unique paths/AKA robot grid*/
+public int uniquePaths(int m, int n) {
+
+    int[][] robotgrid=new int[m][n];
+
+    for(int i=0;i<m;i++){
+        robotgrid[i][0]=1;
+    }
+
+    for(int j=0;j<n;j++){
+        robotgrid[0][j]=1;
+    }
+
+    for(int i=1;i<m;i++){
+        for(int j=1;j<n;j++){
+            robotgrid[i][j]=robotgrid[i-1][j]+robotgrid[i][j-1];
+        }
+    }
+    return robotgrid[m-1][n-1];
+}
+
+/**Longest Common Subsequence*/
+
+
+
+
