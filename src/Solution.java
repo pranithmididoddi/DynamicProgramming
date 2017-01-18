@@ -78,7 +78,7 @@ public int numDistinct(String S, String T) {
     }
     return res[S.length()][T.length()];
 }
-}
+
 /**Unique paths/AKA robot grid*/
 public int uniquePaths(int m, int n) {
 
@@ -100,6 +100,7 @@ public int uniquePaths(int m, int n) {
     return robotgrid[m-1][n-1];
 }
 
+}
 /**Longest Common Subsequence*/
 
 
