@@ -96,14 +96,14 @@ public static int uniquePaths(int m, int n) {
 
     for(int i=1;i<m;i++){
         for(int j=1;j<n;j++){
-            robotgrid[i][j]=robotgrid[i-1][j]+robotgrid[i][j-1];
+            robotgrid[i][j]=robotgrid[i-1][j]+robotgrid[i][j-1]+robotgrid[i-1][j-1];
         }
     }
     return robotgrid[m-1][n-1];
 }
 
 }
-/**Longest Common Subsequence*/
+/**Maximum Subarray*/
 
 
 
